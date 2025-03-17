@@ -52,6 +52,7 @@ public class PrimaryController {
         rdMultiplicacion.setToggleGroup(operaciones);
     }
 
+    // funcion que me permite crear un mensaje de alerta
     private void mostrarMensaje(String mensaje){
         Alert alert = new Alert(AlertType.INFORMATION);
         alert.setTitle("Warming");
@@ -59,7 +60,6 @@ public class PrimaryController {
         alert.setContentText(mensaje);
         alert.showAndWait();
     }
-
 
     @FXML
     private void onOperarButtonClick() throws IOException{
@@ -91,9 +91,19 @@ public class PrimaryController {
             rdMultiplicacion.setDisable(false);
         }
         else if(rdResta.isSelected()){
+
+            if(num1 < num2){
+                mostrarMensaje("Error: El primer numero debe ser mayor al segundo");
+                return;
+            }
+            else{
             resultado = (num1 - num2);
             txtResultado.setText(String.valueOf(resultado));
-
+            }
+        }
+        else if(rdMultiplicacion.isSelected()){
+            resultado = (num1 * num2);
+            txtResultado.setText(String.valueOf(resultado));
         }
         
     }
