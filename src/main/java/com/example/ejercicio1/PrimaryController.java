@@ -105,6 +105,16 @@ public class PrimaryController {
             resultado = (num1 * num2);
             txtResultado.setText(String.valueOf(resultado));
         }
+        else if(rdDivision.isSelected()){
+            if(num2 == 0){
+                mostrarMensaje("Error: No se puede dividir por 0");
+                return;
+            }
+            else{
+                resultado = (num1 / num2);
+                txtResultado.setText(String.valueOf(resultado));
+            }
+        }
         
     }
 
