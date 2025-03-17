@@ -63,6 +63,7 @@ public class PrimaryController {
 
     @FXML
     private void onOperarButtonClick() throws IOException{
+        try{
         Alert alert = new Alert(AlertType.INFORMATION);
         float num1=0, num2=0, resultado=0;
         num1 = Float.parseFloat(txtOP1.getText());
@@ -115,6 +116,10 @@ public class PrimaryController {
                 txtResultado.setText(String.valueOf(resultado));
             }
         }
+    }catch(NumberFormatException e){
+        mostrarMensaje("Error: Formato de numero incorrecto");
+        return;
+    }
         
     }
 
