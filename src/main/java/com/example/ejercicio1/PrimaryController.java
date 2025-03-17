@@ -113,4 +113,11 @@ public class PrimaryController {
         mostrarMensaje("Gracias Por Usar La Calculadora");
         System.exit(0);
     }
+
+    @FXML
+    private void onLimpiarButtonClick() throws IOException{
+        txtOP1.setText("0");
+        txtOP2.setText("0");
+        txtResultado.setText("0");
+    }
 }

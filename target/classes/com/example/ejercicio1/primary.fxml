@@ -18,18 +18,19 @@
             <TextField fx:id="txtOP2" layoutX="242.0" layoutY="198.0" />
             <Label layoutX="160.0" layoutY="147.0" text="Operando 1" />
             <Label layoutX="160.0" layoutY="202.0" text="Operando 2" />
-            <RadioButton fx:id="rdSuma" layoutX="229.0" layoutY="319.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="81.0" text="Suma" />
+            <RadioButton fx:id="rdSuma" layoutX="229.0" layoutY="319.0" mnemonicParsing="false" onAction="#onRdSumaButtonClick" prefHeight="18.0" prefWidth="81.0" text="Suma" />
             <RadioButton fx:id="rdDivision" layoutX="310.0" layoutY="319.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="99.0" text="Division" />
             <RadioButton fx:id="rdResta" layoutX="229.0" layoutY="369.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="81.0" text="Resta" />
             <RadioButton fx:id="rdMultiplicacion" layoutX="317.0" layoutY="369.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="124.0" text="Multiplicacion" />
-            <TextField fx:id="txtResultado" layoutX="234.0" layoutY="443.0" />
-            <Label layoutX="160.0" layoutY="447.0" text="Resultado" />
+            <TextField fx:id="txtResultado" layoutX="242.0" layoutY="440.0" />
+            <Label layoutX="168.0" layoutY="444.0" text="Resultado" />
             <Label layoutX="238.0" layoutY="63.0" prefHeight="41.0" prefWidth="160.0" text="Mini Calculadora">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
             <Button fx:id="btnSalir" layoutX="495.0" layoutY="14.0" onAction="#onSalirButtonClick" prefHeight="35.0" prefWidth="81.0" text="Salir" />
+            <Button fx:id="btnLimpiar" layoutX="495.0" layoutY="66.0" onAction="#onLimpiarButtonClick" prefHeight="35.0" prefWidth="81.0" text="Limpiar" />
          </children>
       </AnchorPane>
    </children>
